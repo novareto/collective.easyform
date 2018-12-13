@@ -112,7 +112,7 @@ class IEasyForm(Schema):
         title=_(u'label_form_tabbing',
                 default=u'Turn fieldsets to tabs'),
         description=_(u'help_form_tabbing', default=u''),
-        default=True,
+        default=False,
         required=False,
     )
     default_fieldset_label = zope.schema.TextLine(

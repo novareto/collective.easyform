@@ -3,12 +3,14 @@
   <head><title></title></head>
   <body>
     <p tal:content="structure body_pre | nothing" />
-    <dl>
-        <tal:block repeat="field data | nothing">
-            <dt tal:content="python:fields[field]" />
-            <dd tal:content="structure python:widgets[field]" />
-        </tal:block>
-    </dl>
+    <table style="border-collapse: collapse; border: 1px solid black;">
+      <tbody>
+        <tr tal:repeat="field data | nothing">
+          <td style="border: 1px solid black;" tal:content="python:fields[field]" />
+          <td style="border: 1px solid black;" tal:content="structure python:widgets[field]" />
+        </tr>
+      </tbody>
+    </table>
     <p tal:content="structure body_post | nothing" />
     <p tal:content="structure body_footer | nothing" />
   </body>
