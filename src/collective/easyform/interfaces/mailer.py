@@ -226,9 +226,8 @@ class IMailer(IAction):
     includeEmpties = zope.schema.Bool(
         title=_(u'label_mailEmpties_text', default=u'Include Empties'),
         description=_(u'help_mailEmpties_text', default=u''
-                      u'Check this to include titles '
-                      u'for fields that received no input. Uncheck '
-                      u'to leave fields with no input out of the e-mail.'),
+                      u'Aktivieren Sie dieses Feld um auch Formularfelder '
+                      u'ohne Benutzereingaben in der E-Mail zu übermitteln.'),
         default=True,
         required=False,
     )

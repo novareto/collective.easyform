@@ -223,12 +223,12 @@ msgstr ""
 #. Default: "Check this to employ Cross-Site Request Forgery protection. Note that only HTTP Post actions will be allowed."
 #: collective/easyform/interfaces/easyform.py:145
 msgid "help_csrf"
-msgstr ""
+msgstr "Aktivieren Sie dieses Feld, um den standortübergreifenden Schutz vor Fälschungen zu gewährleisten."
 
 #. Default: "This field allows you to change default fieldset label."
 #: collective/easyform/interfaces/easyform.py:129
 msgid "help_default_fieldset_label_text"
-msgstr "Dieses Feld erlaubt die Veränderung der 'Standard' Fieldset Bezeichnung."
+msgstr "Dieses Feld erlaubt die Veränderung der 'Standard' Feldgruppen Bezeichnung."
 
 #. Default: "The text will be displayed after the form fields."
 #: collective/easyform/interfaces/easyform.py:176
@@ -242,7 +242,7 @@ msgstr ""
 
 #: collective/easyform/interfaces/fields.py:28
 msgid "help_field_widget"
-msgstr ""
+msgstr "Wähle hier das Aussehen des Eingabefeldes. Ohne weitere Angaben wird die Standardeinstellung übernommen."
 
 #. Default: "Check this to make the form redirect to an SSL-enabled version of itself (https://) if accessed via a non-SSL URL (http://).  In order to function properly, this requires a web server that has been configured to handle the HTTPS protocol on port 443 and forward it to Zope."
 #: collective/easyform/interfaces/easyform.py:154
@@ -276,12 +276,12 @@ msgstr "Text der als Fusszeilen am Ende der E-Mail durch zwei Minuszeichen abget
 #. Default: "Text appended to fields listed in mail-body"
 #: collective/easyform/interfaces/mailer.py:162
 msgid "help_formmailer_body_post"
-msgstr "Text, der in der E-Mail nach der Feldliste angezeigt wird."
+msgstr "Text, der in der E-Mail nach der tabellarischen Feldliste angezeigt wird."
 
 #. Default: "Text prepended to fields listed in mail-body"
 #: collective/easyform/interfaces/mailer.py:149
 msgid "help_formmailer_body_pre"
-msgstr "Text, der in der E-Mail vor der Feldliste angezeigt wird."
+msgstr "Text, der in der E-Mail vor der tabellarischenb Feldliste angezeigt wird."
 
 #. Default: "This is a Zope Page Template used for rendering of the mail-body. You don't need to modify it, but if you know TAL (Zope's Template Attribute Language) have the full power to customize your outgoing mails."
 #: collective/easyform/interfaces/mailer.py:228
@@ -326,7 +326,7 @@ msgstr ""
 #. Default: "Choose a form field from which you wish to extract input for the To header. If you choose anything other than \"None\", this will override the \"Recipient's \" e-mail address setting above. Be very cautious about allowing unguarded user input for this purpose."
 #: collective/easyform/interfaces/mailer.py:62
 msgid "help_formmailer_to_extract"
-msgstr ""
+msgstr "Wählen Sie ein Formularfeld aus, aus dem die E-Mail Adresse des Empfängers für die Bestätigungs-E-Mail ausgelesen werden soll."
 
 #. Default: "This override field allows you to insert content into the xhtml head. The typical use is to add custom CSS or JavaScript. Specify a TALES expression returning a string. The string will be inserted with no interpretation. PLEASE NOTE: errors in the evaluation of this expression will cause an error on form display."
 #: collective/easyform/interfaces/easyform.py:298
@@ -336,22 +336,22 @@ msgstr ""
 #. Default: "Check this to display field titles for fields that received no input. Uncheck to leave fields with no input off the list."
 #: collective/easyform/interfaces/easyform.py:383
 msgid "help_includeEmpties_text"
-msgstr ""
+msgstr "Bei Aktivierung werden auch Formularfelder ohne Benutzereingaben in der Danke-Seite dargestellt (z.B. bei optionalen Feldern)."
 
 #. Default: "Check this to include titles for fields that received no input. Uncheck to leave fields with no input out of the e-mail."
 #: collective/easyform/interfaces/mailer.py:212
 msgid "help_mailEmpties_text"
-msgstr ""
+msgstr "Bei Aktivierung werden auch Formularfelder ohne Benutzereingaben in der E-Mail übermittelt (z.B. bei optionalen Feldern)."
 
 #. Default: "Check this to include input for all fields (except label and file fields). If you check this, the choices in the pick box below will be ignored."
 #: collective/easyform/interfaces/mailer.py:189
 msgid "help_mailallfields_text"
-msgstr ""
+msgstr "Bei Aktivierung dieses Feldes werden alle Daten des Formulars in der E-Mail übermittelt."
 
 #. Default: "Pick the fields whose inputs you'd like to include in the e-mail."
 #: collective/easyform/interfaces/mailer.py:200
 msgid "help_mailfields_text"
-msgstr ""
+msgstr "Auswahl der Formularfelder, die in der E-Mail übermittelt werden sollen."
 
 #: collective/easyform/interfaces/easyform.py:114
 msgid "help_method"
@@ -380,12 +380,12 @@ msgstr ""
 #. Default: "Pick any extra data you'd like saved with the form input."
 #: collective/easyform/interfaces/savedata.py:75
 msgid "help_savedataextra_text"
-msgstr ""
+msgstr "Auswahl von Extra-Feldern aus der HTTP-Verbindung, die im Datensammler gespeichert werden sollen."
 
 #. Default: "Pick the fields whose inputs you'd like to include in the saved data. If empty, all fields will be saved."
 #: collective/easyform/interfaces/savedata.py:63
 msgid "help_savefields_text"
-msgstr ""
+msgstr "Auswahl der Formularfelder, die im Datensammler gespeichert werden  sollen."
 
 #. Default: "Write your script here."
 #: collective/easyform/interfaces/customscript.py:32
@@ -482,12 +482,12 @@ msgstr "Sollen die Spaltenbezeichnungen als erste Zeile in der heruntergeladenen
 #. Default: "Select the validators to use on this field"
 #: collective/easyform/interfaces/fields.py:97
 msgid "help_userfield_validators"
-msgstr "Wáhle die Validatoren für diese Feld aus."
+msgstr "Wähle die Validatoren für dieses Feld aus."
 
 #. Default: "Pick any items from the HTTP headers that you'd like to insert as X- headers in the message."
 #: collective/easyform/interfaces/mailer.py:260
 msgid "help_xinfo_headers_text"
-msgstr "Wähle irgendwelche HTTP-Header, die in die E-Mail als 'X-' Kopfzeilen eingefügr werden sollen.' "
+msgstr "Wähle welche HTTP-Header in die E-Mail als 'X-' Kopfzeile eingefügt werden sollen.' "
 
 #: collective/easyform/browser/exportimport.py:49
 msgid "import"
@@ -521,7 +521,7 @@ msgstr "CSRF Schutz"
 #. Default: "Custom Default Fieldset Label"
 #: collective/easyform/interfaces/easyform.py:127
 msgid "label_default_fieldset_label_text"
-msgstr "Eigene 'Standard' Fieldset Bezeichnung"
+msgstr "Eigene 'Standard' Feldgruppen Bezeichnung"
 
 #. Default: "Download Format"
 #: collective/easyform/interfaces/savedata.py:85
@@ -551,7 +551,7 @@ msgstr "Erzwinge SSL Verbindung"
 #. Default: "Turn fieldsets to tabs"
 #: collective/easyform/interfaces/easyform.py:120
 msgid "label_form_tabbing"
-msgstr "Verwandeln von Fieldsets in Reiter"
+msgstr "Umwandeln von Feldgruppen in Reiter"
 
 #. Default: "Custom Form Action"
 #: collective/easyform/interfaces/easyform.py:242
@@ -681,7 +681,7 @@ msgstr "Empfänger Ausdruck"
 #. Default: "Reset Button Label"
 #: collective/easyform/interfaces/easyform.py:107
 msgid "label_reset_button"
-msgstr "Beschriftung Zurücksetzen Knopf"
+msgstr "Beschriftung Zurücksetzen-Knopf"
 
 #. Default: "Rich Label"
 #: collective/easyform/fields.py:107
@@ -726,7 +726,7 @@ msgstr "Zeige alle Felder"
 #. Default: "Show Reset Button"
 #: collective/easyform/interfaces/easyform.py:101
 msgid "label_showcancel_text"
-msgstr "Zeige Reset Knopf"
+msgstr "Zeige Zurücksetzen-Knopf"
 
 #. Default: "Show Responses"
 #: collective/easyform/interfaces/easyform.py:372
@@ -830,3 +830,31 @@ msgstr "Datum und Zeit an dem das Formular abgeschickt wurde"
 #: collective/easyform/vocabularies.py:64
 msgid "vocabulary_tsv_text"
 msgstr "Werte durch Tabulatoren getrennt (TSV)"
+
+#Kundeneinstellungen
+msgid "add_new_field_hellip"
+msgstr "Neues Feld"
+
+msgid "add_fieldset_hellip"
+msgstr "Neue Feldgruppe"
+
+msgid "add_new_action_hellip"
+msgstr "Neue Aktion"
+
+msgid "RelationChoice"
+msgstr "Referenzauswahl"
+
+msgid "RelationList"
+msgstr "Referenzliste"
+
+msgid "label_sendCSV_text"
+msgstr "Sende CSV-Anhang"
+
+msgid "label_sendXML_text"
+msgstr "Sende XML-Anhang"
+
+msgid "help_sendCSV_text"
+msgstr "Bei Aktivierung wird eine CSV-Datei im Anhang der E-Mail gesendet."
+
+msgid "help_sendXML_text"
+msgstr "Bei Aktivierung wird eine CSV-Datei im Anhang der E-Mail gesendet."

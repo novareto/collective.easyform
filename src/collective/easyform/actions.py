@@ -751,7 +751,7 @@ CustomScriptAction = ActionFactory(
 )
 SaveDataAction = ActionFactory(
     SaveData, _
-    (u'label_savedata_action', default=u'Save Data'),
+    (u'label_savedata_action', default=u'Daten sammeln'),
     'collective.easyform.AddDataSavers'
 )
 

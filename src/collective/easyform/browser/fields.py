@@ -57,7 +57,7 @@ class EasyFormFieldsView(SchemaContext):
         super(EasyFormFieldsView, self).__init__(
             self.schema,
             request,
-            name='fields'
+            name = 'fields'
         )
 
     def publishTraverse(self, request, name):

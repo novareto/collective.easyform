@@ -23,7 +23,8 @@
             Status message
         </div>
         <div id="content">
-            <h1 class="documentFirstHeading" tal:content="view/label | nothing" />
+            <h1 tal:condition="python: '@@fields' in request.URL" class="documentFirstHeading" tal:content="string:Felder bearbeiten" />
+            <h1 tal:condition="python: '@@actions' in request.URL" class="documentFirstHeading" tal:content="string:Aktionen bearbeiten" />
             <div id="content-core">
                 <span tal:replace="structure view/contents" />
             </div>

@@ -1,25 +1,48 @@
 <model
     xmlns="http://namespaces.plone.org/supermodel/schema"
     xmlns:easyform="http://namespaces.plone.org/supermodel/easyform"
+    xmlns:form="http://namespaces.plone.org/supermodel/form"
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="collective.easyform">
   <schema>
+    <field name="anrede" type="zope.schema.Choice">
+      <default>Frau</default>
+      <description/>
+      <title>Anrede</title>
+      <values>
+        <element>Frau</element>
+        <element>Herr</element>
+        <element>Divers</element>
+      </values>
+    </field>
+    <field name="vorname_nachname" type="zope.schema.TextLine">
+      <description/>
+      <title>Vorname Nachname</title>
+    </field>
     <field
-        name="replyto"
+        name="antwort"
         type="zope.schema.TextLine"
         easyform:TDefault="python:member and member.getProperty('email', '') or ''"
         easyform:serverSide="False"
         easyform:validators="isValidEmail">
       <description/>
-      <title>Your E-Mail Address</title>
+      <title>E-Mail-Adresse</title>
     </field>
-    <field name="topic" type="zope.schema.TextLine">
+    <field name="betreff" type="zope.schema.TextLine">
       <description/>
-      <title>Subject</title>
+      <title>Betreff</title>
     </field>
-    <field name="comments" type="zope.schema.Text">
+    <field name="kommentar" type="zope.schema.Text">
       <description/>
-      <title>Comments</title>
+      <title>Kommentar</title>
+    </field>
+    <field name="datenschutz" 
+           type="zope.schema.Bool" 
+           easyform:validators="isChecked">
+      <default>False</default>
+      <description>Ich habe die Datenschutzerklärung zur Kenntnis genommen und erkläre mich mit deren Inhalten einverstanden.</description>
+      <title>Datenschutzerklärung</title>
+      <form:widget type="plone.app.z3cform.widget.SingleCheckBoxBoolFieldWidget"/>
     </field>
   </schema>
 </model>
